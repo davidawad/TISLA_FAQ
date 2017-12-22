@@ -42,6 +42,7 @@ def webhook():
 
                     send_message(sender_id, "roger that! sending buttons...")
 
+                    # fucking work
                     g = {}
                     g['buttons'] = [
                                   {
@@ -51,7 +52,7 @@ def webhook():
                                   }
                                 ]
 
-                    send_message(sender_id, g)
+                    send_content(sender_id, g)
 
 
 
@@ -65,6 +66,31 @@ def webhook():
                     pass
 
     return "ok", 200
+
+
+
+def send_content(recipient_id, content):
+
+    log("sending message to {recipient}: {text}".format(recipient=recipient_id, text=message_text))
+
+    params = {
+        "access_token": os.environ["PAGE_ACCESS_TOKEN"]
+    }
+    headers = {
+        "Content-Type": "application/json"
+    }
+
+    # update data with json formatted passed content
+    data = json.dumps({
+        "recipient": {
+            "id": recipient_id
+        },
+    }.update(content))
+
+    r = requests.post("https://graph.facebook.com/v2.6/me/messages", params=params, headers=headers, data=data)
+    if r.status_code != 200:
+        log(r.status_code)
+        log(r.text)
 
 
 def send_message(recipient_id, message_text):
