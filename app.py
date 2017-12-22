@@ -85,12 +85,17 @@ def send_content(recipient_id, content):
         "recipient": {
             "id": recipient_id
         },
-    }.update(content))
+        "buttons": {
+                "type": "postback",
+                "title": "TITLE ATTR",
+                "payload": "DEVELOPER_DEFINED_PAYLOAD"
+            }
+    })
 
     r = requests.post("https://graph.facebook.com/v2.6/me/messages", params=params, headers=headers, data=data)
     if r.status_code != 200:
         log(r.status_code)
-        log(r.text)
+        # log(r)
 
 
 def send_message(recipient_id, message_text):
