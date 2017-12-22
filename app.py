@@ -71,7 +71,7 @@ def webhook():
 
 def send_content(recipient_id, content):
 
-    log("sending message to {recipient}: {content}".format(recipient=recipient_id, content=content))
+    log("sending message to {recipient}: ".format(recipient=recipient_id))
 
     params = {
         "access_token": os.environ["PAGE_ACCESS_TOKEN"]
