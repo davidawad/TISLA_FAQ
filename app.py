@@ -42,6 +42,15 @@ def webhook():
 
                     send_message(sender_id, "roger that!")
                     send_message(sender_id, "roger that second!")
+                    send_message(sender_id, { "buttons":[
+                                              {
+                                                "type":"postback",
+                                                "title":"Bookmark Item",
+                                                "payload":"DEVELOPER_DEFINED_PAYLOAD"
+                                              }
+                                            ]
+                                        }
+                                    )
 
                 if messaging_event.get("delivery"):  # delivery confirmation
                     pass
