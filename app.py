@@ -91,6 +91,8 @@ def send_content(recipient_id, content):
                 #  "payload": "DEVELOPER_DEFINED_PAYLOAD"
             #  }
 
+      "message":{
+        "text": "Here's a quick reply!",
         "quick_replies":[
           {
             "content_type":"text",
@@ -99,11 +101,15 @@ def send_content(recipient_id, content):
             "image_url":"http://example.com/img/red.png"
           },
           {
+            "content_type":"location"
+          },
+          {
             "content_type":"text",
             "title":"Something Else",
             "payload":"<POSTBACK_PAYLOAD>"
           }
         ]
+      }
 
     })
 
