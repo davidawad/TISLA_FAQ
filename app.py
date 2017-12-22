@@ -85,11 +85,29 @@ def send_content(recipient_id, content):
         "recipient": {
             "id": recipient_id
         },
-        "buttons": {
-                "type": "postback",
-                "title": "TITLE ATTR",
-                "payload": "DEVELOPER_DEFINED_PAYLOAD"
-            }
+        #  "buttons": {
+                #  "type": "postback",
+                #  "title": "TITLE ATTR",
+                #  "payload": "DEVELOPER_DEFINED_PAYLOAD"
+            #  }
+
+        "quick_replies":[
+          {
+            "content_type":"text",
+            "title":"Search",
+            "payload":"<POSTBACK_PAYLOAD>",
+            "image_url":"http://example.com/img/red.png"
+          },
+          {
+            "content_type":"location"
+          },
+          {
+            "content_type":"text",
+            "title":"Something Else",
+            "payload":"<POSTBACK_PAYLOAD>"
+          }
+        ]
+
     })
 
     r = requests.post("https://graph.facebook.com/v2.6/me/messages", params=params, headers=headers, data=data)
