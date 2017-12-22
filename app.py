@@ -50,8 +50,6 @@ def webhook():
                                     "payload": "DEVELOPER_DEFINED_PAYLOAD"
                                   }
                                 ]
-                            }
-
 
                     send_message(sender_id, g)
 
