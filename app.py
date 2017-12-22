@@ -99,9 +99,6 @@ def send_content(recipient_id, content):
             "image_url":"http://example.com/img/red.png"
           },
           {
-            "content_type":"location"
-          },
-          {
             "content_type":"text",
             "title":"Something Else",
             "payload":"<POSTBACK_PAYLOAD>"
