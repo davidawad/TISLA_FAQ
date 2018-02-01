@@ -13,11 +13,17 @@ app = Flask(__name__)
 
 def message_mapping(message):
     # mapping of responses to content
-    if message == "HELLO ROBOT":
-        send_message("ROBOT SAYS HELLO FROM MAPPING FUNCTION")
 
-    else:
-        send_message(intro_message)
+    # if nothing matches, send back the intro message
+    return_val = intro_message
+    return_replies = [""]
+
+    if message == "HELLO ROBOT":
+        return_val = "ROBOT SAYS HELLO FROM MAPPING FUNCTION"
+
+    return {"text": return_val,
+            "quick_replies": return_replies
+            }
 
 
 
@@ -37,7 +43,6 @@ def verify():
 def webhook():
 
     # endpoint for processing incoming messaging events
-
     data = request.get_json()
     log(data)  # you may not want to log every incoming message in production, but it's good for testing
 
@@ -55,14 +60,15 @@ def webhook():
 
                     log("Received message: " + message_text)
 
-                    message_mapping("")
+                    send_content(sender_id, message_text)
 
-                    send_message(sender_id, "Here's a reply from the message functino")
+                    send_message(sender_id, "Here's a reply from the message function")
 
                     send_content(sender_id, {"text":"Here's a text reply from content function"})
 
-                    # fucking work
 
+
+                    # fucking work
                     g = {
                         "text": "Here's a quick reply with buttons!",
                         "quick_replies":[
@@ -117,8 +123,6 @@ def send_content(recipient_id, content):
         },
 
       "message": content
-
-
     })
 
     r = requests.post("https://graph.facebook.com/v2.6/me/messages", params=params, headers=headers, data=data)
