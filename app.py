@@ -60,7 +60,7 @@ def webhook():
 
                     log("Received message: " + message_text)
 
-                    send_content(sender_id, message_text)
+                    #  send_content(sender_id, message_text)
 
                     send_message(sender_id, "Here's a reply from the message function")
 
