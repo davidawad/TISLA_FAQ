@@ -16,7 +16,7 @@ def message_mapping(message):
 
     # if nothing matches, send back the intro message
     return_val = intro_message
-    return_replies = [""]
+    return_replies = []
 
     if message == "HELLO ROBOT":
         return_val = "ROBOT SAYS HELLO FROM MAPPING FUNCTION"
@@ -60,9 +60,8 @@ def webhook():
 
                     log("Received message: " + message_text)
 
-                    send_content(sender_id, message_mapping(message_text))
+                    # send_content(sender_id, message_mapping(message_text))
 
-                    # send_message(sender_id, "Here's a reply from the message function")
 
                     send_content(sender_id, {"text":"Here's a text reply from content function"})
 
