@@ -22,7 +22,7 @@ intro_replies = [
         ]
 
 
-loan_forgiveness_message = "First the bad news, most borrowers should expect to repay their student loans as agreed. With that said, there are many student loan repayment, discharge and forgiveness programs out there. Over time, we plan on having a comprehensive list, but for now, we’ll just talk about the most common programs."
+loan_forgiveness_message = "First the bad news, most borrowers should expect to repay their student loans as agreed. With that said, there are many student loan repayment, discharge and forgiveness programs out there. Over time, we plan on having a comprehensive list, but for now, we'll just talk about the most common programs."
 
 
 loan_forgiveness_replies = [
