@@ -49,6 +49,7 @@ def bot_response(message):
     if ret_replies:
         ret_obj["quick_replies"] = ret_replies
 
+
     return ret_obj
 
 
@@ -85,7 +86,7 @@ def webhook():
 
 
                     log("Received message: " + message_text +
-                            "From sender id: " + recipient_id)
+                            " from sender id: " + recipient_id)
 
                     # generate response with the message text and send it back to the user
                     send_content(sender_id, bot_response(message_text))
