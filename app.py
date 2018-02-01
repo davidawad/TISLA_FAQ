@@ -1,12 +1,24 @@
 import os
 import sys
 import json
+import * from constants
 from datetime import datetime
 
 import requests
 from flask import Flask, request
 
 app = Flask(__name__)
+
+
+
+def message_mapping(message):
+    # mapping of responses to content
+    if message == "HELLO ROBOT":
+        send_message("ROBOT SAYS HELLO FROM MAPPING FUNCTION")
+
+    else:
+        send_message(intro_message)
+
 
 
 @app.route('/', methods=['GET'])
@@ -39,6 +51,9 @@ def webhook():
                     sender_id = messaging_event["sender"]["id"]        # the facebook ID of the person sending you the message
                     recipient_id = messaging_event["recipient"]["id"]  # the recipient's ID, which should be your page's facebook ID
                     message_text = messaging_event["message"]["text"]  # the message's text
+
+
+                    log("Received message: " + message_text)
 
                     send_message(sender_id, "roger that! sending buttons...")
 
@@ -85,11 +100,6 @@ def send_content(recipient_id, content):
         "recipient": {
             "id": recipient_id
         },
-        #  "buttons": {
-                #  "type": "postback",
-                #  "title": "TITLE ATTR",
-                #  "payload": "DEVELOPER_DEFINED_PAYLOAD"
-            #  }
 
       "message":{
         "text": "Here's a quick reply!",
@@ -110,7 +120,6 @@ def send_content(recipient_id, content):
           }
         ]
       }
-
     })
 
     r = requests.post("https://graph.facebook.com/v2.6/me/messages", params=params, headers=headers, data=data)
