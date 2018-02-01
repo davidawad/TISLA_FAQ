@@ -1,7 +1,7 @@
 import os
 import sys
 import json
-import * from constants
+from constants import *
 from datetime import datetime
 
 import requests
