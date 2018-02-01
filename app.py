@@ -55,17 +55,33 @@ def webhook():
 
                     log("Received message: " + message_text)
 
-                    send_message(sender_id, "roger that! sending buttons...")
+                    message_mapping("")
+
+                    send_message(sender_id, "Here's a reply from the message functino")
+
+                    send_content(sender_id, {"text":"Here's a text reply from content function"})
 
                     # fucking work
-                    g = {}
-                    g['buttons'] = [
-                                  {
-                                    "type": "postback",
-                                    "title": "TITLE ATTR",
-                                    "payload": "DEVELOPER_DEFINED_PAYLOAD"
-                                  }
-                                ]
+
+                    g = {
+                        "text": "Here's a quick reply with buttons!",
+                        "quick_replies":[
+                          {
+                            "content_type":"text",
+                            "title":"Search",
+                            "payload":"<POSTBACK_PAYLOAD>",
+                            "image_url":"http://example.com/img/red.png"
+                          },
+                          {
+                            "content_type":"location"
+                          },
+                          {
+                            "content_type":"text",
+                            "title":"Something Else",
+                            "payload":"<POSTBACK_PAYLOAD>"
+                          }
+                        ]
+                      }
 
                     send_content(sender_id, g)
 
@@ -83,10 +99,9 @@ def webhook():
     return "ok", 200
 
 
-
 def send_content(recipient_id, content):
 
-    log("sending message to {recipient}: ".format(recipient=recipient_id))
+    log("sending message to {recipient}: {text}".format(recipient=recipient_id, text=content))
 
     params = {
         "access_token": os.environ["PAGE_ACCESS_TOKEN"]
@@ -101,31 +116,15 @@ def send_content(recipient_id, content):
             "id": recipient_id
         },
 
-      "message":{
-        "text": "Here's a quick reply!",
-        "quick_replies":[
-          {
-            "content_type":"text",
-            "title":"Search",
-            "payload":"<POSTBACK_PAYLOAD>",
-            "image_url":"http://example.com/img/red.png"
-          },
-          {
-            "content_type":"location"
-          },
-          {
-            "content_type":"text",
-            "title":"Something Else",
-            "payload":"<POSTBACK_PAYLOAD>"
-          }
-        ]
-      }
+      "message": content
+
+
     })
 
     r = requests.post("https://graph.facebook.com/v2.6/me/messages", params=params, headers=headers, data=data)
     if r.status_code != 200:
         log(r.status_code)
-        # log(r)
+        log(r)
 
 
 def send_message(recipient_id, message_text):
@@ -152,7 +151,8 @@ def send_message(recipient_id, message_text):
         log(r.text)
 
 
-def log(msg, *args, **kwargs):  # simple wrapper for logging to stdout on heroku
+def log(msg, *args, **kwargs):
+    # simple wrapper for logging to stdout on heroku
     try:
         if type(msg) is dict:
             msg = json.dumps(msg)
