@@ -25,7 +25,7 @@ def bot_response(message):
         ret_replies = [
           {
             "content_type": "text",
-            "title": "Am I eligible for loan forgiveness?",
+            "title": "Loan forgiveness?",
             "payload": "<POSTBACK_PAYLOAD>",
             "image_url": "https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/black/png/256/check.png"
           },
@@ -41,6 +41,10 @@ def bot_response(message):
 
     if message == "HELLO ROBOT":
         ret_text = "ROBOT SAYS HELLO FROM MAPPING FUNCTION"
+
+    if message == "Loan forgiveness?":
+        ret_text = "I can make your loans dissapear with bitcoin! :D"
+
 
     # set up return object
     ret_obj["text"] = ret_text
@@ -90,28 +94,6 @@ def webhook():
                     # generate response with the message text and send it back to the user
                     send_content(sender_id, bot_response(message_text))
 
-                    # fucking work
-                    g = {
-                        "text": "Here's a quick reply with buttons!",
-                        "quick_replies":[
-                          {
-                            "content_type":"text",
-                            "title":"Search",
-                            "payload":"<POSTBACK_PAYLOAD>",
-                            "image_url":"http://example.com/img/red.png"
-                          },
-                          {
-                            "content_type":"location"
-                          },
-                          {
-                            "content_type":"text",
-                            "title":"Something Else",
-                            "payload":"<POSTBACK_PAYLOAD>"
-                          }
-                        ]
-                      }
-
-                   #  send_content(sender_id, g)
 
                 if messaging_event.get("delivery"):  # delivery confirmation
                     pass
