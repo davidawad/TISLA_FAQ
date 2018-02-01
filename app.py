@@ -21,7 +21,7 @@ def bot_response(message):
 
     # user sent reset signal
     if message == "reset":
-        return ret_text = intro_message
+        ret_text = intro_message
 
     if message == "HELLO ROBOT":
         ret_text = "ROBOT SAYS HELLO FROM MAPPING FUNCTION"
