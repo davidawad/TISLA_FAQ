@@ -60,7 +60,7 @@ def webhook():
 
                     log("Received message: " + message_text)
 
-                    #  send_content(sender_id, message_text)
+                    #  send_content(sender_id, message_mapping(message_text))
 
                     send_message(sender_id, "Here's a reply from the message function")
 
@@ -107,7 +107,7 @@ def webhook():
 
 def send_content(recipient_id, content):
 
-    log("sending message to {recipient}: {text}".format(recipient=recipient_id, text=content))
+    log("sending message to {recipient}: {content}".format(recipient=recipient_id, content=str(content)))
 
     params = {
         "access_token": os.environ["PAGE_ACCESS_TOKEN"]
