@@ -11,26 +11,53 @@ from flask import Flask, request
 app = Flask(__name__)
 
 
+# TODO use a dictionary to map the responses or something better?
+def find_response(key):
+    # find replies for a given string
+    message_matrix = {
+            "intro" : intro_message
+            }
+
+    replies_matrix = {
+            "intro" : intro_replies
+            }
+
+    message_matrix[key]
+    replies_matrix[key]
+
+    if (not (( key in message_matrix.keys() ) and
+             ( key in replies_matrix.keys() ) )
+        ): return find_response('intro')
+    return (message_matrix[key], replies_matrix[key])
+
 
 def bot_response(message):
-    # mapping of responses to content
+    # determine the response and properly format it
 
-    # if nothing matches, send back the intro message
     ret_obj = {}
     ret_text = 'DEFAULT MESSAGE'
     ret_replies = []
 
+    # filter what to send back based on what's given
+
+
+    # TODO repetitive
     # user sent reset command
     if message.lower() in ["restart", 'reset']:
-        ret_text = intro_message
-        ret_replies = intro_replies
-
-    if message == "HELLO ROBOT":
-        ret_text = "ROBOT SAYS HELLO FROM MAPPING FUNCTION"
+        ret_text    = find_response('intro')
+        ret_replies = find_replies('intro')
 
     if message == "Loan forgiveness?":
         ret_text = loan_forgiveness_message
         ret_replies = loan_forgiveness_replies
+
+    if message == "Public Service Loan Forgiveness":
+        ret_text = pslf_message
+        ret_replies = pslf_replies
+
+    if message == "Teacher Loan Forgiveness":
+        ret_text = teacher_loan_message
+        ret_replies = teacher_loan_replies
 
     # set up return object
     ret_obj["text"] = ret_text
