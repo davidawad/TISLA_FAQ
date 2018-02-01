@@ -20,11 +20,11 @@ def bot_response(message):
     ret_replies = []
 
     if message == "HELLO ROBOT":
-        return_text = "ROBOT SAYS HELLO FROM MAPPING FUNCTION"
+        ret_text = "ROBOT SAYS HELLO FROM MAPPING FUNCTION"
 
 
     # set up return object
-    ret_obj["text"] = return_text
+    ret_obj["text"] = ret_text
 
     if return_replies:
         ret_obj["quick_replies"] = ret_replies
