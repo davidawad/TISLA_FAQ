@@ -30,7 +30,7 @@ loan_forgiveness_replies = [
               "content_type": "text",
               "title": "Public Service Loan Forgiveness",
               "payload": "<POSTBACK_PAYLOAD>",
-              "image_url": "https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/bla  ck/png/256/check.png"
+              "image_url": "https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/black/png/256/check.png"
             },
             {
               "content_type": "text",
