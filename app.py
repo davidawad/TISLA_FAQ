@@ -60,9 +60,9 @@ def webhook():
 
                     log("Received message: " + message_text)
 
-                    #  send_content(sender_id, message_mapping(message_text))
+                    send_content(sender_id, message_mapping(message_text))
 
-                    send_message(sender_id, "Here's a reply from the message function")
+                    # send_message(sender_id, "Here's a reply from the message function")
 
                     send_content(sender_id, {"text":"Here's a text reply from content function"})
 
@@ -89,7 +89,7 @@ def webhook():
                         ]
                       }
 
-                    send_content(sender_id, g)
+                    #  send_content(sender_id, g)
 
 
 
@@ -121,8 +121,7 @@ def send_content(recipient_id, content):
         "recipient": {
             "id": recipient_id
         },
-
-      "message": content
+        "message": content
     })
 
     r = requests.post("https://graph.facebook.com/v2.6/me/messages", params=params, headers=headers, data=data)
