@@ -40,11 +40,13 @@ def bot_response(message):
     ret_replies = []
 
     # filter what to send back based on what's given
+    # lowercase message to make searching easier
+    message = message.lower()
 
 
     # TODO repetitive
     # user sent reset command
-    if message.lower() in ["restart", 'reset']:
+    if message in ["restart", 'reset']:
         ret_text, ret_replies  = find_response('intro')
 
     if message == "Loan forgiveness?":
