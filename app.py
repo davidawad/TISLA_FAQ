@@ -16,7 +16,7 @@ def bot_response(message):
 
     # if nothing matches, send back the intro message
     ret_obj = {}
-    ret_text = intro_message
+    ret_text = 'DEFAULT MESSAGE'
     ret_replies = []
 
     # user sent reset command
@@ -88,7 +88,7 @@ def webhook():
                             " from sender id: " + recipient_id)
 
                     # generate response with the message text and send it back to the user
-                    send_content(sender_id, bot_response(message_text))
+                    # send_content(sender_id, bot_response(message_text))
 
                     # fucking work
                     g = {
@@ -111,7 +111,7 @@ def webhook():
                         ]
                       }
 
-                    #  send_content(sender_id, g)
+                    send_content(sender_id, g)
 
                 if messaging_event.get("delivery"):  # delivery confirmation
                     pass
