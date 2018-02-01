@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-:w
 import os
 import sys
 import json
