@@ -11,19 +11,25 @@ app = Flask(__name__)
 
 
 
-def message_mapping(message):
+def bot_response(message):
     # mapping of responses to content
 
     # if nothing matches, send back the intro message
-    return_val = intro_message
-    return_replies = []
+    ret_obj = {}
+    ret_text = intro_message
+    ret_replies = []
 
     if message == "HELLO ROBOT":
-        return_val = "ROBOT SAYS HELLO FROM MAPPING FUNCTION"
+        return_text = "ROBOT SAYS HELLO FROM MAPPING FUNCTION"
 
-    return {"text": return_val,
-            "quick_replies": return_replies
-            }
+
+    # set up return object
+    ret_obj["text"] = return_text
+
+    if return_replies:
+        ret_obj["quick_replies"] = ret_replies
+
+    return ret_obj
 
 
 
@@ -58,14 +64,10 @@ def webhook():
                     message_text = messaging_event["message"]["text"]  # the message's text
 
 
-                    log("Received message: " + message_text)
+                    log("Received message: " + message_text +
+                            "From sender id: " + recipient_id)
 
-                    send_content(sender_id, message_mapping(message_text))
-
-
-                    # send_content(sender_id, {"text":"Here's a text reply from content function"})
-
-
+                    send_content(sender_id, bot_response(message_text))
 
                     # fucking work
                     g = {
@@ -89,8 +91,6 @@ def webhook():
                       }
 
                     #  send_content(sender_id, g)
-
-
 
                 if messaging_event.get("delivery"):  # delivery confirmation
                     pass
@@ -128,30 +128,6 @@ def send_content(recipient_id, content):
     if r.status_code != 200:
         log(r.status_code)
         log(r)
-
-
-def send_message(recipient_id, message_text):
-
-    log("sending message to {recipient}: {text}".format(recipient=recipient_id, text=message_text))
-
-    params = {
-        "access_token": os.environ["PAGE_ACCESS_TOKEN"]
-    }
-    headers = {
-        "Content-Type": "application/json"
-    }
-    data = json.dumps({
-        "recipient": {
-            "id": recipient_id
-        },
-        "message": {
-            "text": message_text
-        }
-    })
-    r = requests.post("https://graph.facebook.com/v2.6/me/messages", params=params, headers=headers, data=data)
-    if r.status_code != 200:
-        log(r.status_code)
-        log(r.text)
 
 
 def log(msg, *args, **kwargs):
