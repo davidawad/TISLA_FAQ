@@ -60,10 +60,10 @@ def webhook():
 
                     log("Received message: " + message_text)
 
-                    # send_content(sender_id, message_mapping(message_text))
+                    send_content(sender_id, message_mapping(message_text))
 
 
-                    send_content(sender_id, {"text":"Here's a text reply from content function"})
+                    # send_content(sender_id, {"text":"Here's a text reply from content function"})
 
 
 
