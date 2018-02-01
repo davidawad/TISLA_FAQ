@@ -25,6 +25,7 @@ def find_response(key):
     message_matrix[key]
     replies_matrix[key]
 
+    # if the key doesn't exist in both matrices, return the intro.
     if (not (( key in message_matrix.keys() ) and
              ( key in replies_matrix.keys() ) )
         ): return find_response('intro')
@@ -44,8 +45,7 @@ def bot_response(message):
     # TODO repetitive
     # user sent reset command
     if message.lower() in ["restart", 'reset']:
-        ret_text    = find_response('intro')
-        ret_replies = find_replies('intro')
+        ret_text, ret_replies  = find_response('intro')
 
     if message == "Loan forgiveness?":
         ret_text = loan_forgiveness_message
