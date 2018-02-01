@@ -106,7 +106,8 @@ def webhook():
 
 def send_content(recipient_id, content):
 
-    log("sending message to {recipient}: {content}".format(recipient=recipient_id, content=str(content)))
+    # fails with unicode errors
+    #  log("sending message to {recipient}: {content}".format(recipient=recipient_id, content=str(content)))
 
     params = {
         "access_token": os.environ["PAGE_ACCESS_TOKEN"]
