@@ -22,6 +22,23 @@ def bot_response(message):
     # user sent reset signal
     if message == "reset":
         ret_text = intro_message
+        ret_replies = [
+          {
+            "content_type":"text",
+            "title":"Am I eligible for loan forgiveness?",
+            "payload":"<POSTBACK_PAYLOAD>",
+            "image_url":"https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/black/png/256/check.png"
+          },
+          {
+            "content_type":"location"
+          },
+          {
+            "content_type":"text",
+            "title":"Something Else",
+            "payload":"<POSTBACK_PAYLOAD>"
+          }
+        ]
+
 
     if message == "HELLO ROBOT":
         ret_text = "ROBOT SAYS HELLO FROM MAPPING FUNCTION"
