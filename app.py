@@ -28,36 +28,8 @@ def bot_response(message):
         ret_text = "ROBOT SAYS HELLO FROM MAPPING FUNCTION"
 
     if message == "Loan forgiveness?":
-        ret_text = "First the bad news, most borrowers should expect to repay their student loans as agreed. With that said, there are many student loan repayment, discharge and forgiveness programs out there. Over time, we plan on having a comprehensive list, but for now, we’ll just talk about the most common programs."
-
-        ret_replies = [
-          {
-            "content_type": "text",
-            "title": "Public Service Loan Forgiveness",
-            "payload": "<POSTBACK_PAYLOAD>",
-            "image_url": "https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/black/png/256/check.png"
-          },
-          {
-            "content_type": "text",
-            "title": "Teacher Loan Forgiveness",
-            "payload": "<POSTBACK_PAYLOAD>"
-          },
-          {
-            "content_type": "text",
-            "title": "DoD Loan Repayment",
-            "payload": "<POSTBACK_PAYLOAD>"
-          },
-          {
-            "content_type": "text",
-            "title": "Americorps and Peace Core Repayment",
-            "payload": "<POSTBACK_PAYLOAD>"
-          },
-          {
-            "content_type": "text",
-            "title": "Perkins Loan Forgiveness",
-            "payload": "<POSTBACK_PAYLOAD>"
-          }
-        ]
+        ret_text = loan_forgiveness_message
+        ret_replies = loan_forgiveness_replies
 
     # set up return object
     ret_obj["text"] = ret_text
