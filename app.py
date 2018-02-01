@@ -19,14 +19,17 @@ def bot_response(message):
     ret_text = intro_message
     ret_replies = []
 
+    # user sent reset signal
+    if message == "reset":
+        return ret_text = intro_message
+
     if message == "HELLO ROBOT":
         ret_text = "ROBOT SAYS HELLO FROM MAPPING FUNCTION"
-
 
     # set up return object
     ret_obj["text"] = ret_text
 
-    if return_replies:
+    if ret_replies:
         ret_obj["quick_replies"] = ret_replies
 
     return ret_obj
@@ -67,6 +70,7 @@ def webhook():
                     log("Received message: " + message_text +
                             "From sender id: " + recipient_id)
 
+                    # generate response with the message text and send it back to the user
                     send_content(sender_id, bot_response(message_text))
 
                     # fucking work
