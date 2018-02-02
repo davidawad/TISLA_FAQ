@@ -65,7 +65,7 @@ def bot_response(message):
              "Federal loans past due": 'flpd',
              "Private loans past due": 'plpd',
              "I have federal loans in default": 'flid',
-             'Am I eligible for bankruptcy?': 'bankruptcy'
+             'Am I eligible for bankruptcy?': 'bankruptcy',
 
              # consolidate my loans?
              "Should I consolidate my loans?": 'consolidate_1',
