@@ -39,6 +39,8 @@ def bot_response(message):
              'restart': 'intro',
              'hey': 'intro',
              'hello': 'intro',
+             'hi': 'intro',
+             'hi there': 'intro',
 
              # loan forgiveness
              "Loan forgiveness" : "loan_forgiveness",
