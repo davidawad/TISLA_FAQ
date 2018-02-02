@@ -63,20 +63,23 @@ def bot_response(message):
              "I have federal loans in default": 'flid',
              'Am I eligible for bankruptcy?': 'bankruptcy'
 
-
+             # consolidate my loans?
+             "Should I consolidate my loans?": 'consolidate_1',
 
             }
 
-    # run a fuzzy match to find the closest response mapping we have
+    # run a fuzzy match to find the closest response mapping to a key in the data
     mapped_input = process.extractOne(message.lower(), input_message_key_mappings.keys())[0]
 
     # use the mapping dict to map the input to the proper response
     bot_response_key = input_message_key_mappings[mapped_input]
 
+    # retrieve the response object components
     ret_text, ret_replies, ret_buttons = find_response(bot_response_key)
 
 
-    # set up return object
+    # stitch together the return object
+    # TODO cleaner way to do this setting?
     ret_obj["text"] = ret_text
 
     if ret_replies:
@@ -113,11 +116,15 @@ def webhook():
         for entry in data["entry"]:
             for messaging_event in entry["messaging"]:
 
-                if messaging_event.get("message"):  # someone sent us a message
+                # someone sent us a message
+                if messaging_event.get("message"):
 
-                    sender_id = messaging_event["sender"]["id"]        # the facebook ID of the person sending you the message
-                    recipient_id = messaging_event["recipient"]["id"]  # the recipient's ID, which should be your page's facebook ID
-                    message_text = messaging_event["message"]["text"]  # the message's text
+                    # the facebook ID of the person sending you the message
+                    sender_id = messaging_event["sender"]["id"]
+                    # the recipient's ID, which should be your page's facebook ID
+                    recipient_id = messaging_event["recipient"]["id"]
+                    # the message's text
+                    message_text = messaging_event["message"]["text"]
 
 
                     log("Received message: " + message_text +
@@ -127,13 +134,16 @@ def webhook():
                     send_content(sender_id, bot_response(message_text))
 
 
-                if messaging_event.get("delivery"):  # delivery confirmation
+                # delivery confirmation
+                if messaging_event.get("delivery"):
                     pass
 
-                if messaging_event.get("optin"):  # optin confirmation
+                # optin confirmation
+                if messaging_event.get("optin"):
                     pass
 
-                if messaging_event.get("postback"):  # user clicked/tapped "postback" button in earlier message
+                # user clicked/tapped "postback" button in earlier message
+                if messaging_event.get("postback"):
                     pass
 
     return "ok", 200

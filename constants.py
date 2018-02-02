@@ -56,6 +56,17 @@ Read more about repaying mixed loans here: Take a look at the different types of
     'pdod' : "Having student loans that are delinquent or in default can be overwhelming. Many borrowers just assume there’s nothing that can be done and choose to ignore the problem either until they have the money to pay, or hope it will go away altogether. This is almost never the best strategy. To ensure we guide you in the right direction, let’s find out a little more about your situation.",
 
 
+  'plpd' : 'If your federal loans are past due, it’s important to find out how far past due they are by calling or logging on to your loan servicer’s website. Take a look at our site for some milestones to look out for: http://freestudentloanadvice.org/past-due/federal-loan-delinquency/',
+
+
+    'flid' : 'Federal law defines default as 270 days past due. Defaulted loans are not eligible for deferments, lower payment options or other benefits. Defaulted loans are also eligible for wage and tax refund garnishment, significant collection costs, and have significant implications to the borrower’s credit report. While the first set of rules take effect as soon as the loan becomes 270 days past due, the rest don’t come into effect until the loan transfers to a guaranty agency (for FFEL loans) or a collections agency (for Direct Loans). Take a look at our page on the subject: http://freestudentloanadvice.org/past-due/federal-loan-default/',
+
+
+
+    'bankruptcy' : 'We would be remiss if we didn’t bring up bankruptcy as part of this discussion. While student loans are technically not dischargeable in bankruptcy, there are exceptions. We will expand this section in the future to go into more detail, but in the meantime, you can read about student loans and bankruptcy here: https://www.usnews.com/education/blogs/student-loan-ranger/2014/08/13/debunking-the-student-loan-bankruptcy-myth',
+
+
+   'consolidate_1': "There's a lot to read about consolidating loans, take a look at our site and you can find a lot more information: http://freestudentloanadvice.org/should-i-consolidate-my-loans/",
 
   },
 
@@ -80,7 +91,13 @@ Read more about repaying mixed loans here: Take a look at the different types of
               "title": "Past Due or Default",
               "payload": "<POSTBACK_PAYLOAD>",
               "image_url": "https://raw.githubusercontent.com/encharm/Font-Awesome-SVG-PNG/master/black/png/256/cloud.png"
-            }
+            },
+            {
+              "content_type": "text",
+              "title": "Should I consolidate my loans?",
+              "payload": "<POSTBACK_PAYLOAD>",
+              "image_url": "https://raw.githubusercontent.com/encharm/Font-Awesome-SVG-PNG/master/black/png/256/refresh.png"
+            },
           ],
 
     'loan_forgiveness' : [
@@ -112,6 +129,7 @@ Read more about repaying mixed loans here: Take a look at the different types of
        }
      ],
 
+    # payment plans
     'payment_plans' : [
         {
           "content_type": "text",
@@ -156,6 +174,7 @@ Read more about repaying mixed loans here: Take a look at the different types of
       ],
 
 
+    # past due or in default
     'pdod' : [
         {
           "content_type": "text",
@@ -187,6 +206,35 @@ Read more about repaying mixed loans here: Take a look at the different types of
 
 
 
+    # should I consolidate
+    'consolidate_1' : [
+        {
+          "content_type": "text",
+          "title": "consolidate ya?",
+          "payload": "<POSTBACK_PAYLOAD>",
+          "image_url": "https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/black/png/256/check.png"
+        },
+        {
+          "content_type": "text",
+          "title": "Private loans past due",
+          "payload": "<POSTBACK_PAYLOAD>"
+        },
+        {
+          "content_type": "text",
+          "title": "Federal loans in default",
+          "payload": "<POSTBACK_PAYLOAD>"
+        },
+        {
+          "content_type": "text",
+          "title": "Am I eligible for bankruptcy?",
+          "payload": "<POSTBACK_PAYLOAD>"
+        },
+        {
+          "content_type": "text",
+          "title": "I'm not sure",
+          "payload": "<POSTBACK_PAYLOAD>"
+        },
+      ],
 
 
 
