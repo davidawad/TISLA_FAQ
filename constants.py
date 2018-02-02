@@ -15,7 +15,7 @@ raw_response_data = {
 
     'pslf' : """ Public Service Loan Forgiveness (PSLF) tends to be the most commonly known federal student loan forgiveness program. Some also call it the “Obama Forgiveness Program” although you should note that nobody with any real knowledge of the student loan programs will ever call it that. In fact, this misnomer is one of the clues we use to identify potential student loan scams. You should too.
 
-                       To be eligible to get the balance of your loan forgiven under PSLF, the borrower will need to make 120 payments, on eligible loans, while working full time for an eligible employer. It’s important to note that all three of these things have to happen at the same time. Once you complete the 120 payments, the balance of your loans are forgiven, tax free.""",
+To be eligible to get the balance of your loan forgiven under PSLF, the borrower will need to make 120 payments, on eligible loans, while working full time for an eligible employer. It’s important to note that all three of these things have to happen at the same time. Once you complete the 120 payments, the balance of your loans are forgiven, tax free.""",
 
 
     'teacher_lf' : """Teacher Loan Forgiveness (TLF) pays up to $17,500 in eligible federal student loans for qualified teachers who teach in a Title I school for five consecutive years.
@@ -32,7 +32,7 @@ To be eligible for TLF you must have had no federal loans made prior to October 
 
     'payment_plans' : """Choosing the right repayment plan can be confusing. It’s important to think not only about the short term, but the long term. While you are (rightly) concerned about your current financial situation, it’s also important to think about the long term. With that in mind, if you remember nothing else remember that the name of the game is to pay the least amount over time.
 
-    With that in mind, let’s go through a few questions to make sure we are heading in the right direction.""",
+With that in mind, let’s go through a few questions to make sure we are heading in the right direction.""",
 
 
     'federal_loans' : """Federal student loans have many repayment options. Which ones you are eligible for with depend what type of loans you have and in some cases, when you took those loans out. If you aren’t sure, now is a good time to go to the National Student Loan Data System (NSLDS) to find out.""",
@@ -47,7 +47,7 @@ Our policy is to not recommend one lender over another, but coming soon is a lis
 
     'fnpl' : """There are several strategies to consider if you have both federal and private student loans. We at TISLA tend to be on the financially conservative side so take that into consideration as you go through these suggestions and the order of preference we’ve put them in. One thing to remember as you consider these options, is that no matter what, you are required to pay the minimum due on each loan. The other thing to remember is that no matter if you pay extra or not, payments are applied in the same way as far as what goes to interest and what goes to principal.
 
-    Read more about repaying mixed loans here: Take a look at the different types of loans on our website here: http://freestudentloanadvice.org/what-loans/""",
+Read more about repaying mixed loans here: Take a look at the different types of loans on our website here: http://freestudentloanadvice.org/what-loans/""",
 
 
     'not_sure' : "Take a look at the different types of loans on our website here: http://freestudentloanadvice.org/what-loans/",
@@ -146,7 +146,7 @@ Our policy is to not recommend one lender over another, but coming soon is a lis
 
     },
 
- 'buttons' : {
+  'buttons' : {
 
    "perkins_lf" : [
      {
@@ -157,8 +157,7 @@ Our policy is to not recommend one lender over another, but coming soon is a lis
        "messenger_extensions": True,
        "fallback_url": "http://freestudentloanadvice.org/loan-forgiveness/perkins-loan-forgiveness-program/"
      }
-
     ]
- }
+  }
 
 }
