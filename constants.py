@@ -7,7 +7,7 @@ raw_response_data = {
 
   'responses' : {
 
-    'intro' : "Hello! Thanks for reaching out to TISLA. You can walk through this guide to get advice on your student loans. Send 'restart' at any time to restart. Or just visit us at freestudentloanadvice.org",
+    'intro' : "Hello! Thanks for reaching out to TISLA. You can walk through our guide to get advice on your student loans. Send 'restart' at any time to restart. Or just visit us at freestudentloanadvice.org",
 
 
     'loan_forgiveness' : "First the bad news, most borrowers should expect to repay their student loans as agreed. With that said, there are many student loan repayment, discharge and forgiveness programs out there. Over time, we plan on having a comprehensive list, but for now, we'll just talk about the most common programs.",
@@ -56,10 +56,17 @@ Read more about repaying mixed loans here: Take a look at the different types of
     'pdod' : "Having student loans that are delinquent or in default can be overwhelming. Many borrowers just assume there’s nothing that can be done and choose to ignore the problem either until they have the money to pay, or hope it will go away altogether. This is almost never the best strategy. To ensure we guide you in the right direction, let’s find out a little more about your situation.",
 
 
-  'plpd' : 'If your federal loans are past due, it’s important to find out how far past due they are by calling or logging on to your loan servicer’s website. Take a look at our site for some milestones to look out for: http://freestudentloanadvice.org/past-due/federal-loan-delinquency/',
+  'flpd' : 'If your federal loans are past due, it’s important to find out how far past due they are by calling or logging on to your loan servicer’s website. Take a look at our site for some milestones to look out for: http://freestudentloanadvice.org/past-due/federal-loan-delinquency/',
 
 
-    'flid' : 'Federal law defines default as 270 days past due. Defaulted loans are not eligible for deferments, lower payment options or other benefits. Defaulted loans are also eligible for wage and tax refund garnishment, significant collection costs, and have significant implications to the borrower’s credit report. While the first set of rules take effect as soon as the loan becomes 270 days past due, the rest don’t come into effect until the loan transfers to a guaranty agency (for FFEL loans) or a collections agency (for Direct Loans). Take a look at our page on the subject: http://freestudentloanadvice.org/past-due/federal-loan-default/',
+  'plpd' : """Unfortunately, most private loan programs do not have lower payment or deferment options for when you are struggling. In their defense, they are for the most part not allowed to offer anything that would “substantially alter the terms of the loan.” This is because private student loans fall under the category of “retail credit” for which the federal Office of the Comptroller of the Currency and the Federal Trade Commission have oversight. So in most cases, it’s not that the lender doesn’t want to help you, it’s that they can’t. You can read more about these situations in this article. Usually the only thing they can offer you is to postpone payments with forbearance for a few months. This can often cost a fee of as much as $150.
+
+Ironically, much like mortgages, once the loan is in default or charge off status (which for most private loans is at 120 days past due) the lenders have more flexibility to assist you. They are no longer restricted in offering options that may alter the terms of the loan you agreed to. Some lenders will offer a temporary lowering of the interest rate to allow you a lower payment. Others will offer interest only payments for a year. All private loans are different so your best recourse is to contact the lender to see what is available.
+
+If you find yourself unable to pay, one strategy is to pay as much as you can, every single month while keeping the lender appraised of your situation. This shows good faith and can often prevent the lender from resorting to litigation to collect the loan. Even if you have no funds now, litigation can add significant fees to the loan and can haunt you down the road so it’s best to avoid it if possible.""",
+
+
+    'flid' : 'Federal law defines default as 270 days past due. Defaulted loans are not eligible for deferments, lower payment options or other benefits. Defaulted loans are also eligible for wage and tax refund garnishment, significant collection costs, and have significant implications to the borrower’s credit report. While the first set of rules take effect as soon as the loan becomes 270 days past due, the rest don’t come into effect until the loan transfers to a guaranty agency (for FFEL loans) or a collections agency (for Direct Loans). There's a lot more information on this subject, feel free to take a look at our page on the subject: http://freestudentloanadvice.org/past-due/federal-loan-default/',
 
 
 
@@ -67,6 +74,11 @@ Read more about repaying mixed loans here: Take a look at the different types of
 
 
    'consolidate_1': "There's a lot to read about consolidating loans, take a look at our site and you can find a lot more information: http://freestudentloanadvice.org/should-i-consolidate-my-loans/",
+
+
+
+   'thank_you': "Thank you! Please feel free to reach out to us anytime either through messenger or on the web.",
+
 
   },
 
@@ -240,26 +252,6 @@ Read more about repaying mixed loans here: Take a look at the different types of
 
 
     },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

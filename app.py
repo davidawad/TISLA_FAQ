@@ -42,6 +42,7 @@ def bot_response(message):
 
              # loan forgiveness
              "Loan forgiveness" : "loan_forgiveness",
+
              "Public Service Loan forgiveness" : "pslf",
              'Teacher Loan Forgiveness': 'teacher_lf',
              'Department of Defense Loan Forgiveness': 'dod_lf',
@@ -51,6 +52,7 @@ def bot_response(message):
 
              # repayment plans
              'Repayment Plans': 'payment_plans',
+
              'I have federal loans': 'federal_loans',
              'I have private loans': 'private_loans',
              'I have both federal and private loans': 'fnpl',
@@ -59,12 +61,16 @@ def bot_response(message):
 
              # past due or default
              "Past due or Default": 'pdod',
+
+             "Federal loans past due": 'flpd',
              "Private loans past due": 'plpd',
              "I have federal loans in default": 'flid',
              'Am I eligible for bankruptcy?': 'bankruptcy'
 
              # consolidate my loans?
              "Should I consolidate my loans?": 'consolidate_1',
+
+             "Thanks" : 'thank_you'
 
             }
 
