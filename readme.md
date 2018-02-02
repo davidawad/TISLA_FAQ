@@ -1,7 +1,8 @@
 # TISLA-FAQ
 
-This bot was built to handle FAQ's for TISLA (The institute for student loan advice).
-TISLA is a 501(c)(3) nonprofit that aims to educate the public about how to deal with student loans and manage your debt. [You can find out more about them here](freestudentloanadvice.org)
+This bot was built to handle FAQ's for TISLA (The Institute for Student Loan Advice).
+
+TISLA is a 501(c)(3) nonprofit that aims to educate the public about how to deal with student loans and manage your debt. [You can find out more about them here](https://freestudentloanadvice.org)
 
 Apparently 40% of people look for advice about student loans on social media; HENCE THIS BOT WAS BORN!
 The goal of the bot is to simply engage with users on social media who might have questions about managing student debt.
@@ -14,9 +15,7 @@ It uses cosine simularity to map a dictionary of input messages to output messag
 
 The bot essentially implements a "decision tree" for a conversation about student loans, and links back to TISLA with more free information.
 
-
 It's built based on this [tutorial](https://blog.hartleybrody.com/fb-messenger-bot/).
-
 
 
 #### "Callback verification failed"
