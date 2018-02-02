@@ -1,16 +1,32 @@
-# Facebook Messenger Bot
-This is a simple python template that uses Flask to build a webhook for Facebook's Messenger Bot API.
+# TISLA-FAQ
 
-Read more in my [tutorial that uses this repository](https://blog.hartleybrody.com/fb-messenger-bot/).
+This bot was built to handle FAQ's for TISLA (The institute for student loan advice).
+TISLA is a 501(c)(3) nonprofit that aims to educate the public about how to deal with student loans and manage your debt. [You can find out more about them at](freestudentloanadvice.org)
 
-*New:* [Check out my Facebook Messenger Bot Course](https://facebook-messenger-bot.teachable.com/p/facebook-messenger-bot/). It walks you through the process of getting this bot hosted on heroku step-by-step, and also unlocks all the content that's hidden in this repo's branches.
+Apparently 40% of people look for advice about student loans on social media; HENCE THIS BOT WAS BORN!
+The goal of the bot is to simply engage with users on social media who might have questions about managing student debt.
 
-## "Callback verification failed"
+
+## How it works
+This is a simple python bot that uses Flask to build a webhook for Facebook's Messenger Bot API.
+It uses cosine simularity to map a dictionary of input messages to output messages that come with quick replies.
+
+
+The bot essentially implements a "decision tree" for a conversation about student loans, and links back to TISLA with more free information.
+
+
+It's built based on this [tutorial](https://blog.hartleybrody.com/fb-messenger-bot/).
+
+
+
+#### "Callback verification failed"
 
 ![Facebook Error](https://cloud.githubusercontent.com/assets/18402893/21538944/f96fcd1e-cdc7-11e6-83ee-a866190d9080.png)
 
 The #1 error that gets reported in issues is that facebook returns an error message (like above) when trying to add the heroku endpoint to your facebook chat application.
 
-Our flask application intentionally returns a 403 Forbidden error if the token that facebook sends doesn't match the token you set using the heroku configuration variables.
-
 If you're getting this error, it likely means that you didn't set your heroku config values properly. Run `heroku config` from the command line within your application and verify that there's a key called `VERIFY_TOKEN` that has been set, and that it's set to the same value as what you've typed into the window on facebook.
+
+
+
+Thank you for reading and feel free to reach out if there's anything I can do.
