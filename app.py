@@ -34,48 +34,6 @@ def bot_response(message):
     # lowercase message to make searching easier
     message = message.lower()
 
-    input_message_key_mappings = {
-            # intro mappings
-             'restart': 'intro',
-             'hey': 'intro',
-             'hello': 'intro',
-             'hi': 'intro',
-             'hi there': 'intro',
-
-             # loan forgiveness
-             "Loan forgiveness" : "loan_forgiveness",
-
-             "Public Service Loan forgiveness" : "pslf",
-             'Teacher Loan Forgiveness': 'teacher_lf',
-             'Department of Defense Loan Forgiveness': 'dod_lf',
-             'Americorps and Peace Corps Loan Repayment': 'dod_lf',
-             'Perkins Loan Forgiveness': 'perkins_lf',
-
-
-             # repayment plans
-             'Repayment Plans': 'payment_plans',
-
-             'I have federal loans': 'federal_loans',
-             'I have private loans': 'private_loans',
-             'I have both federal and private loans': 'fnpl',
-             "I'm not sure": 'not_sure',
-
-
-             # past due or default
-             "Past due or Default": 'pdod',
-
-             "Federal loans past due": 'flpd',
-             "Private loans past due": 'plpd',
-             "I have federal loans in default": 'flid',
-             'Am I eligible for bankruptcy?': 'bankruptcy',
-
-             # consolidate my loans?
-             "Should I consolidate my loans?": 'consolidate_1',
-
-             "Thanks" : 'thank_you'
-
-            }
-
     # run a fuzzy match to find the closest response mapping to a key in the data
     mapped_input = process.extractOne(message.lower(), input_message_key_mappings.keys())[0]
 
