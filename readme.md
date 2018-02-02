@@ -1,7 +1,7 @@
 # TISLA-FAQ
 
 This bot was built to handle FAQ's for TISLA (The institute for student loan advice).
-TISLA is a 501(c)(3) nonprofit that aims to educate the public about how to deal with student loans and manage your debt. [You can find out more about them at](freestudentloanadvice.org)
+TISLA is a 501(c)(3) nonprofit that aims to educate the public about how to deal with student loans and manage your debt. [You can find out more about them here](freestudentloanadvice.org)
 
 Apparently 40% of people look for advice about student loans on social media; HENCE THIS BOT WAS BORN!
 The goal of the bot is to simply engage with users on social media who might have questions about managing student debt.
