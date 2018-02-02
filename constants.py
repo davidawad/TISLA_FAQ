@@ -136,17 +136,20 @@ raw_response_data = {
       ]
     } ,
 
- 'buttons' : [
+ 'buttons' : {
 
-   "perkins_lf" : {
+   "perkins_lf" : [
+    {
      "type":  "web_url",
      "url":   "http://freestudentloanadvice.org/loan-forgiveness/perkins-loan-forgiveness-program/",
      "title": "Select Criteria",
      "webview_height_ratio": "full",
-     "messenger_extensions": true,
+     "messenger_extensions": True,
      "fallback_url": "http://freestudentloanadvice.org/loan-forgiveness/perkins-loan-forgiveness-program/"
    }
 
- ]
+    ]
+
+ }
 
 }
