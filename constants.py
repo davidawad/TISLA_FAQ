@@ -53,6 +53,10 @@ Read more about repaying mixed loans here: Take a look at the different types of
     'not_sure' : "Take a look at the different types of loans on our website here: http://freestudentloanadvice.org/what-loans/",
 
 
+    'pdod' : "Having student loans that are delinquent or in default can be overwhelming. Many borrowers just assume there’s nothing that can be done and choose to ignore the problem either until they have the money to pay, or hope it will go away altogether. This is almost never the best strategy. To ensure we guide you in the right direction, let’s find out a little more about your situation.",
+
+
+
   },
 
 
@@ -68,7 +72,14 @@ Read more about repaying mixed loans here: Take a look at the different types of
             {
               "content_type": "text",
               "title": "Repayment Plans",
-              "payload": "<POSTBACK_PAYLOAD>"
+              "payload": "<POSTBACK_PAYLOAD>",
+              "image_url": "https://raw.githubusercontent.com/encharm/Font-Awesome-SVG-PNG/master/black/png/256/key.png"
+            },
+            {
+              "content_type": "text",
+              "title": "Past Due or Default",
+              "payload": "<POSTBACK_PAYLOAD>",
+              "image_url": "https://raw.githubusercontent.com/encharm/Font-Awesome-SVG-PNG/master/black/png/256/cloud.png"
             }
           ],
 
@@ -77,7 +88,7 @@ Read more about repaying mixed loans here: Take a look at the different types of
            "content_type": "text",
            "title": "Public Service Loan Forgiveness",
            "payload": "<POSTBACK_PAYLOAD>",
-           "image_url": "https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/black/png/256/check.png"
+           # "image_url": ""
          },
          {
            "content_type": "text",
@@ -144,7 +155,65 @@ Read more about repaying mixed loans here: Take a look at the different types of
         },
       ],
 
+
+    'pdod' : [
+        {
+          "content_type": "text",
+          "title": "Federal loans past due but not in default",
+          "payload": "<POSTBACK_PAYLOAD>",
+          "image_url": "https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/black/png/256/check.png"
+        },
+        {
+          "content_type": "text",
+          "title": "Private loans past due",
+          "payload": "<POSTBACK_PAYLOAD>"
+        },
+        {
+          "content_type": "text",
+          "title": "Federal loans in default",
+          "payload": "<POSTBACK_PAYLOAD>"
+        },
+        {
+          "content_type": "text",
+          "title": "Am I eligible for bankruptcy?",
+          "payload": "<POSTBACK_PAYLOAD>"
+        },
+        {
+          "content_type": "text",
+          "title": "I'm not sure",
+          "payload": "<POSTBACK_PAYLOAD>"
+        },
+      ],
+
+
+
+
+
+
+
     },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   'buttons' : {
 

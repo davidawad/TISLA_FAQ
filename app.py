@@ -57,6 +57,12 @@ def bot_response(message):
              "I'm not sure": 'not_sure',
 
 
+             # past due or default
+             "Past due or Default": 'pdod',
+             "Private loans past due": 'plpd',
+             "I have federal loans in default": 'flid',
+             'Am I eligible for bankruptcy?': 'bankruptcy'
+
 
 
             }
