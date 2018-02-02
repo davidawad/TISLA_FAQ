@@ -17,7 +17,6 @@ app = Flask(__name__)
 # TODO use a dictionary to map the responses or something better?
 def find_response(key):
     # find replies for a given string
-
     return (raw_response_data['responses'].get(key),
             raw_response_data['replies'].get(key),
             raw_response_data['buttons'].get(key))
@@ -37,12 +36,24 @@ def bot_response(message):
 
     input_message_key_mappings = {
              'restart': 'intro',
+
+             # loan forgiveness
              "Loan forgiveness" : "loan_forgiveness",
              "Public Service Loan forgiveness" : "pslf",
              'Teacher Loan Forgiveness': 'teacher_lf',
              'Department of Defense Loan Forgiveness': 'dod_lf',
              'Americorps and Peace Corps Loan Repayment': 'dod_lf',
-             'Perkins Loan Forgiveness': 'perkins_lf'
+             'Perkins Loan Forgiveness': 'perkins_lf',
+
+
+             # repayment plans
+             'Repayment Plans': 'payment_plans',
+             'I have federal loans': 'federal_loans',
+             'I have private loans': 'private_loans',
+             'I have both federal and private loans': 'fnpl',
+             "I'm not sure": 'not_sure',
+
+
 
 
             }

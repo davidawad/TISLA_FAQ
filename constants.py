@@ -20,12 +20,38 @@ raw_response_data = {
 
     'teacher_lf' : """Teacher Loan Forgiveness (TLF) pays up to $17,500 in eligible federal student loans for qualified teachers who teach in a Title I school for five consecutive years.
 
-    To be eligible for TLF you must have had no federal loans made prior to October 1, 1998. This includes any loans made after that date, even if you have paid off the loans made prior to October 1, 1998. If you did have loans made prior to that date, the only way to be eligible is if you pay those loan in full BEFORE taking out new loans after that date. Consolidating loans made prior to October 1, 1998 does not make them eligible, even if done after that date.""",
+To be eligible for TLF you must have had no federal loans made prior to October 1, 1998. This includes any loans made after that date, even if you have paid off the loans made prior to October 1, 1998. If you did have loans made prior to that date, the only way to be eligible is if you pay those loan in full BEFORE taking out new loans after that date. Consolidating loans made prior to October 1, 1998 does not make them eligible, even if done after that date.""",
 
 
     'dod_lf' : """There are many state and federal programs that can help you repay your student debt. The most common are the Department of Defense loan repayment program, AmeriCorps and the Peace Corps. The federal government also offers some loan repayment to its employees. We will outline the details of these in the near future here.""",
 
-    'perkins_lf' : """Borrowers with an outstanding balance on a Perkins loan who meet the eligibility criteria can receive a cancellation regardless of when the loan was made for service provided on or after October 7, 1998 even if the borrower’s promissory note does not list the cancellation type. For newer cancellation types, however, the qualifying service or employment must include August 14, 2008 (the date the cancellation type first became available in the law) or begin on or after that date."""
+    'perkins_lf' : """Borrowers with an outstanding balance on a Perkins loan who meet the eligibility criteria can receive a cancellation regardless of when the loan was made for service provided on or after October 7, 1998 even if the borrower’s promissory note does not list the cancellation type. For newer cancellation types, however, the qualifying service or employment must include August 14, 2008 (the date the cancellation type first became available in the law) or begin on or after that date.""",
+
+
+
+
+    'payment_plans' : """Choosing the right repayment plan can be confusing. It’s important to think not only about the short term, but the long term. While you are (rightly) concerned about your current financial situation, it’s also important to think about the long term. With that in mind, if you remember nothing else remember that the name of the game is to pay the least amount over time.
+
+    With that in mind, let’s go through a few questions to make sure we are heading in the right direction.""",
+
+
+    'federal_loans' : """Federal student loans have many repayment options. Which ones you are eligible for with depend what type of loans you have and in some cases, when you took those loans out. If you aren’t sure, now is a good time to go to the National Student Loan Data System (NSLDS) to find out.""",
+
+
+    'private_loans' : """Private student loan options vary by lender, but are generally few and far between. This is because the Federal Trade Commission (FTC) considers private student loans as the same as most other consumer debts and do not allow lenders to substantially alter the original terms of the loan.
+
+Generally the only option available to lower your private student loan payment is to refinance the loan. Refinancing can lower your interest rate and/or extend the term of the loan which will result in a lower monthly payment. It can also be a way to remove your co-signer from the debt. Eligibility for consolidation will depend heavily on your credit score and debt to income ratio.
+
+Our policy is to not recommend one lender over another, but coming soon is a list of every organization we could find that offers private loan consolidation, in alphabetical order""",
+
+
+    'fnpl' : """There are several strategies to consider if you have both federal and private student loans. We at TISLA tend to be on the financially conservative side so take that into consideration as you go through these suggestions and the order of preference we’ve put them in. One thing to remember as you consider these options, is that no matter what, you are required to pay the minimum due on each loan. The other thing to remember is that no matter if you pay extra or not, payments are applied in the same way as far as what goes to interest and what goes to principal.
+
+    Read more about repaying mixed loans here: Take a look at the different types of loans on our website here: http://freestudentloanadvice.org/what-loans/""",
+
+
+    'not_sure' : "Take a look at the different types of loans on our website here: http://freestudentloanadvice.org/what-loans/",
+
 
   },
 
@@ -75,81 +101,64 @@ raw_response_data = {
        }
      ],
 
-
-    'pslf' : [
+    'payment_plans' : [
         {
           "content_type": "text",
-          "title": "Public Service Loan Forgiveness",
+          "title": "I have federal loans",
           "payload": "<POSTBACK_PAYLOAD>",
           "image_url": "https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/black/png/256/check.png"
         },
         {
           "content_type": "text",
-          "title": "Teacher Loan Forgiveness",
+          "title": "I have private loans",
           "payload": "<POSTBACK_PAYLOAD>"
         },
         {
           "content_type": "text",
-          "title": "DoD Loan Repayment",
+          "title": "I have both federal and private loans",
           "payload": "<POSTBACK_PAYLOAD>"
         },
         {
           "content_type": "text",
-          "title": "Americorps and Peace Core Repayment",
-          "payload": "<POSTBACK_PAYLOAD>"
-        },
-        {
-          "content_type": "text",
-          "title": "Perkins Loan Forgiveness",
+          "title": "I'm not sure.",
           "payload": "<POSTBACK_PAYLOAD>"
         }
       ],
 
-
-    'SOMETHING ELSE' : [
+    'federal_loans' : [
         {
           "content_type": "text",
-          "title": "Public Service Loan Forgiveness",
+          "title": "I have direct loans",
           "payload": "<POSTBACK_PAYLOAD>",
           "image_url": "https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/black/png/256/check.png"
         },
         {
           "content_type": "text",
-          "title": "Teacher Loan Forgiveness",
+          "title": "I have FFELP",
           "payload": "<POSTBACK_PAYLOAD>"
         },
         {
           "content_type": "text",
-          "title": "DoD Loan Repayment",
+          "title": "I have Perkins Loans",
           "payload": "<POSTBACK_PAYLOAD>"
         },
-        {
-            "content_type": "text",
-          "title": "Americorps and Peace Core Repayment",
-          "payload": "<POSTBACK_PAYLOAD>"
-        },
-        {
-          "content_type": "text",
-          "title": "Perkins Loan Forgiveness",
-          "payload": "<POSTBACK_PAYLOAD>"
-        }
-      ]
-    } ,
+      ],
 
- 'buttons' : {
+    }
 
-   "perkins_lf" : [
-    {
-     "type":  "web_url",
-     "url":   "http://freestudentloanadvice.org/loan-forgiveness/perkins-loan-forgiveness-program/",
-     "title": "Select Criteria",
-     "webview_height_ratio": "full",
-     "messenger_extensions": True,
-     "fallback_url": "http://freestudentloanadvice.org/loan-forgiveness/perkins-loan-forgiveness-program/"
-   }
+ #  'buttons' : {
 
-    ]
+   #  "perkins_lf" : [
+     #  {
+       #  "type":  "web_url",
+       #  "url":   "http://freestudentloanadvice.org/loan-forgiveness/perkins-loan-forgiveness-program/",
+       #  "title": "Select Criteria",
+       #  "webview_height_ratio": "full",
+       #  "messenger_extensions": True,
+       #  "fallback_url": "http://freestudentloanadvice.org/loan-forgiveness/perkins-loan-forgiveness-program/"
+     #  }
 
- }
+    #  ]
+ #  }
 
 }
