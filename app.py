@@ -19,7 +19,8 @@ def find_response(key):
     # find replies for a given string
 
     return (raw_response_data['responses'].get(key),
-            raw_response_data['replies'].get(key))
+            raw_response_data['replies'].get(key),
+            raw_response_data['buttons'].get(key))
 
 
 def bot_response(message):
@@ -42,6 +43,8 @@ def bot_response(message):
              'Department of Defense Loan Forgiveness': 'dod_lf',
              'Americorps and Peace Corps Loan Repayment': 'dod_lf',
              'Perkins Loan Forgiveness': 'perkins_lf'
+
+
             }
 
     # run a fuzzy match to find the closest response mapping we have
@@ -50,7 +53,7 @@ def bot_response(message):
     # use the mapping dict to map the input to the proper response
     bot_response_key = input_message_key_mappings[mapped_input]
 
-    ret_text, ret_replies = find_response(bot_response_key)
+    ret_text, ret_replies, ret_buttons = find_response(bot_response_key)
 
 
     # set up return object
