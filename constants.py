@@ -30,8 +30,6 @@ raw_response_data = {
   },
 
 
-
-
   'replies': {
 
     'intro' : [
@@ -49,93 +47,106 @@ raw_response_data = {
           ],
 
     'loan_forgiveness' : [
-                 {
-                   "content_type": "text",
-                   "title": "Public Service Loan Forgiveness",
-                   "payload": "<POSTBACK_PAYLOAD>",
-                   "image_url": "https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/black/png/256/check.png"
-                 },
-                 {
-                   "content_type": "text",
-                   "title": "Teacher Loan Forgiveness",
-                   "payload": "<POSTBACK_PAYLOAD>"
-                 },
-                 {
-                 "content_type": "text",
-                 "title": "DoD Loan Repayment",
-                 "payload": "<POSTBACK_PAYLOAD>"
-               },
-               {
-                 "content_type": "text",
-                 "title": "Americorps and Peace Core Repayment",
-                 "payload": "<POSTBACK_PAYLOAD>"
-               },
-               {
-                 "content_type": "text",
-                 "title": "Perkins Loan Forgiveness",
-                 "payload": "<POSTBACK_PAYLOAD>"
-               }
-             ],
+         {
+           "content_type": "text",
+           "title": "Public Service Loan Forgiveness",
+           "payload": "<POSTBACK_PAYLOAD>",
+           "image_url": "https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/black/png/256/check.png"
+         },
+         {
+           "content_type": "text",
+           "title": "Teacher Loan Forgiveness",
+           "payload": "<POSTBACK_PAYLOAD>"
+         },
+         {
+         "content_type": "text",
+         "title": "DoD Loan Repayment",
+         "payload": "<POSTBACK_PAYLOAD>"
+       },
+       {
+         "content_type": "text",
+         "title": "Americorps and Peace Core Repayment",
+         "payload": "<POSTBACK_PAYLOAD>"
+       },
+       {
+         "content_type": "text",
+         "title": "Perkins Loan Forgiveness",
+         "payload": "<POSTBACK_PAYLOAD>"
+       }
+     ],
 
 
     'pslf' : [
-                {
-                  "content_type": "text",
-                  "title": "Public Service Loan Forgiveness",
-                  "payload": "<POSTBACK_PAYLOAD>",
-                  "image_url": "https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/black/png/256/check.png"
-                },
-                {
-                  "content_type": "text",
-                  "title": "Teacher Loan Forgiveness",
-                  "payload": "<POSTBACK_PAYLOAD>"
-                },
-                {
-                  "content_type": "text",
-                  "title": "DoD Loan Repayment",
-                  "payload": "<POSTBACK_PAYLOAD>"
-                },
-                {
-                  "content_type": "text",
-                  "title": "Americorps and Peace Core Repayment",
-                  "payload": "<POSTBACK_PAYLOAD>"
-                },
-                {
-                  "content_type": "text",
-                  "title": "Perkins Loan Forgiveness",
-                  "payload": "<POSTBACK_PAYLOAD>"
-                }
-              ],
+        {
+          "content_type": "text",
+          "title": "Public Service Loan Forgiveness",
+          "payload": "<POSTBACK_PAYLOAD>",
+          "image_url": "https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/black/png/256/check.png"
+        },
+        {
+          "content_type": "text",
+          "title": "Teacher Loan Forgiveness",
+          "payload": "<POSTBACK_PAYLOAD>"
+        },
+        {
+          "content_type": "text",
+          "title": "DoD Loan Repayment",
+          "payload": "<POSTBACK_PAYLOAD>"
+        },
+        {
+          "content_type": "text",
+          "title": "Americorps and Peace Core Repayment",
+          "payload": "<POSTBACK_PAYLOAD>"
+        },
+        {
+          "content_type": "text",
+          "title": "Perkins Loan Forgiveness",
+          "payload": "<POSTBACK_PAYLOAD>"
+        }
+      ],
 
 
     'SOMETHING ELSE' : [
-                {
-                  "content_type": "text",
-                  "title": "Public Service Loan Forgiveness",
-                  "payload": "<POSTBACK_PAYLOAD>",
-                  "image_url": "https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/black/png/256/check.png"
-                },
-                {
-                  "content_type": "text",
-                  "title": "Teacher Loan Forgiveness",
-                  "payload": "<POSTBACK_PAYLOAD>"
-                },
-                {
-                  "content_type": "text",
-                  "title": "DoD Loan Repayment",
-                  "payload": "<POSTBACK_PAYLOAD>"
-                },
-                {
-                    "content_type": "text",
-                  "title": "Americorps and Peace Core Repayment",
-                  "payload": "<POSTBACK_PAYLOAD>"
-                },
-                {
-                  "content_type": "text",
-                  "title": "Perkins Loan Forgiveness",
-                  "payload": "<POSTBACK_PAYLOAD>"
-                }
-              ]
-    }
+        {
+          "content_type": "text",
+          "title": "Public Service Loan Forgiveness",
+          "payload": "<POSTBACK_PAYLOAD>",
+          "image_url": "https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/black/png/256/check.png"
+        },
+        {
+          "content_type": "text",
+          "title": "Teacher Loan Forgiveness",
+          "payload": "<POSTBACK_PAYLOAD>"
+        },
+        {
+          "content_type": "text",
+          "title": "DoD Loan Repayment",
+          "payload": "<POSTBACK_PAYLOAD>"
+        },
+        {
+            "content_type": "text",
+          "title": "Americorps and Peace Core Repayment",
+          "payload": "<POSTBACK_PAYLOAD>"
+        },
+        {
+          "content_type": "text",
+          "title": "Perkins Loan Forgiveness",
+          "payload": "<POSTBACK_PAYLOAD>"
+        }
+      ]
+    } ,
+
+ 'buttons' : [
+
+   "perkins_lf" : {
+     "type":  "web_url",
+     "url":   "http://freestudentloanadvice.org/loan-forgiveness/perkins-loan-forgiveness-program/",
+     "title": "Select Criteria",
+     "webview_height_ratio": "full",
+     "messenger_extensions": true,
+     "fallback_url": "http://freestudentloanadvice.org/loan-forgiveness/perkins-loan-forgiveness-program/"
+   }
+
+ ]
 
 }

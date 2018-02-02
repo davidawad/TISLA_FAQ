@@ -28,6 +28,7 @@ def bot_response(message):
     ret_obj = {}
     ret_text = 'DEFAULT MESSAGE'
     ret_replies = []
+    ret_buttons = []
 
     # filter what to send back based on what's given
     # lowercase message to make searching easier
@@ -57,6 +58,9 @@ def bot_response(message):
 
     if ret_replies:
         ret_obj["quick_replies"] = ret_replies
+
+    if ret_buttons:
+        ret_obj["buttons"] = ret_buttons
 
     return ret_obj
 
