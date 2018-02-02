@@ -222,12 +222,6 @@ If you find yourself unable to pay, one strategy is to pay as much as you can, e
     'consolidate_1' : [
         {
           "content_type": "text",
-          "title": "consolidate ya?",
-          "payload": "<POSTBACK_PAYLOAD>",
-          "image_url": "https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/black/png/256/check.png"
-        },
-        {
-          "content_type": "text",
           "title": "Private loans past due",
           "payload": "<POSTBACK_PAYLOAD>"
         },
@@ -247,9 +241,6 @@ If you find yourself unable to pay, one strategy is to pay as much as you can, e
           "payload": "<POSTBACK_PAYLOAD>"
         },
       ],
-
-
-
 
     },
 
