@@ -35,7 +35,10 @@ def bot_response(message):
     message = message.lower()
 
     input_message_key_mappings = {
+            # intro mappings
              'restart': 'intro',
+             'hey': 'intro',
+             'hello': 'intro',
 
              # loan forgiveness
              "Loan forgiveness" : "loan_forgiveness",

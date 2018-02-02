@@ -63,11 +63,11 @@ Read more about repaying mixed loans here: Take a look at the different types of
               "content_type": "text",
               "title": "Loan forgiveness?",
               "payload": "<POSTBACK_PAYLOAD>",
-              "image_url": "https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/black/png/256/check.png"
+              "image_url": "https://raw.githubusercontent.com/encharm/Font-Awesome-SVG-PNG/master/black/png/256/check.png"
             },
             {
               "content_type": "text",
-              "title": "Something Else",
+              "title": "Repayment Plans",
               "payload": "<POSTBACK_PAYLOAD>"
             }
           ],
