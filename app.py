@@ -2,11 +2,14 @@
 import os
 import sys
 import json
-from constants import *
-from datetime import datetime
-
 import requests
+
+from datetime import datetime
+from fuzzywuzzy import process
 from flask import Flask, request
+
+# import constants
+from constants import *
 
 app = Flask(__name__)
 
@@ -14,22 +17,9 @@ app = Flask(__name__)
 # TODO use a dictionary to map the responses or something better?
 def find_response(key):
     # find replies for a given string
-    message_matrix = {
-            "intro" : intro_message
-            }
 
-    replies_matrix = {
-            "intro" : intro_replies
-            }
-
-    message_matrix[key]
-    replies_matrix[key]
-
-    # if the key doesn't exist in both matrices, return the intro.
-    if (not (( key in message_matrix.keys() ) and
-             ( key in replies_matrix.keys() ) )
-        ): return find_response('intro')
-    return (message_matrix[key], replies_matrix[key])
+    return (raw_response_data['responses'].get(key),
+            raw_response_data['replies'].get(key))
 
 
 def bot_response(message):
@@ -43,30 +33,30 @@ def bot_response(message):
     # lowercase message to make searching easier
     message = message.lower()
 
+    input_message_key_mappings = {
+             'restart': 'intro',
+             "Loan forgiveness" : "loan_forgiveness",
+             "Public Service Loan forgiveness" : "pslf",
+             'Teacher Loan Forgiveness': 'teacher_lf',
+             'Department of Defense Loan Forgiveness': 'dod_lf',
+             'Americorps and Peace Corps Loan Repayment': 'dod_lf',
+             'Perkins Loan Forgiveness': 'perkins_lf'
+            }
 
-    # TODO repetitive
-    # user sent reset command
-    if message in ["restart", 'reset']:
-        ret_text, ret_replies  = find_response('intro')
+    # run a fuzzy match to find the closest response mapping we have
+    mapped_input = process.extractOne(message.lower(), input_message_key_mappings.keys())[0]
 
-    if message == "Loan forgiveness?":
-        ret_text = loan_forgiveness_message
-        ret_replies = loan_forgiveness_replies
+    # use the mapping dict to map the input to the proper response
+    bot_response_key = input_message_key_mappings[mapped_input]
 
-    if message == "Public Service Loan Forgiveness":
-        ret_text = pslf_message
-        ret_replies = pslf_replies
+    ret_text, ret_replies = find_response(bot_response_key)
 
-    if message == "Teacher Loan Forgiveness":
-        ret_text = teacher_loan_message
-        ret_replies = teacher_loan_replies
 
     # set up return object
     ret_obj["text"] = ret_text
 
     if ret_replies:
         ret_obj["quick_replies"] = ret_replies
-
 
     return ret_obj
 
