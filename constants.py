@@ -41,9 +41,7 @@ input_message_key_mappings = {
 
          # consolidate my loans?
          "Should I consolidate my loans?": 'consolidate_1',
-
          "Thanks" : 'thank_you'
-
         }
 
 
@@ -53,7 +51,7 @@ raw_response_data = {
 
   'responses' : {
 
-    'intro' : "Hello! Thanks for reaching out to TISLA. You can walk through our guide to get advice on your student loans. Send 'restart' at any time to restart. Or just visit us at freestudentloanadvice.org",
+      'intro' : "Hello! Thanks for reaching out to TISLA. You can walk through our guide to get advice on your student loans. Send 'restart' at any time to restart. Or just visit us at http://freestudentloanadvice.org",
 
 
     'loan_forgiveness' : "First the bad news, most borrowers should expect to repay their student loans as agreed. With that said, there are many student loan repayment, discharge and forgiveness programs out there. Over time, we plan on having a comprehensive list, but for now, we'll just talk about the most common programs.",
@@ -72,9 +70,6 @@ To be eligible for TLF you must have had no federal loans made prior to October 
     'dod_lf' : """There are many state and federal programs that can help you repay your student debt. The most common are the Department of Defense loan repayment program, AmeriCorps and the Peace Corps. The federal government also offers some loan repayment to its employees. We will outline the details of these in the near future here.""",
 
     'perkins_lf' : """Borrowers with an outstanding balance on a Perkins loan who meet the eligibility criteria can receive a cancellation regardless of when the loan was made for service provided on or after October 7, 1998 even if the borrower’s promissory note does not list the cancellation type. For newer cancellation types, however, the qualifying service or employment must include August 14, 2008 (the date the cancellation type first became available in the law) or begin on or after that date.""",
-
-
-
 
     'payment_plans' : """Choosing the right repayment plan can be confusing. It’s important to think not only about the short term, but the long term. While you are (rightly) concerned about your current financial situation, it’s also important to think about the long term. With that in mind, if you remember nothing else remember that the name of the game is to pay the least amount over time.
 
@@ -193,7 +188,6 @@ If you find yourself unable to pay, one strategy is to pay as much as you can, e
           "content_type": "text",
           "title": "I have federal loans",
           "payload": "<POSTBACK_PAYLOAD>",
-          "image_url": "https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/black/png/256/check.png"
         },
         {
           "content_type": "text",
@@ -202,7 +196,7 @@ If you find yourself unable to pay, one strategy is to pay as much as you can, e
         },
         {
           "content_type": "text",
-          "title": "I have both federal and private loans",
+          "title": "I have both.",
           "payload": "<POSTBACK_PAYLOAD>"
         },
         {
@@ -217,7 +211,6 @@ If you find yourself unable to pay, one strategy is to pay as much as you can, e
           "content_type": "text",
           "title": "I have direct loans",
           "payload": "<POSTBACK_PAYLOAD>",
-          "image_url": "https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/black/png/256/check.png"
         },
         {
           "content_type": "text",
@@ -238,7 +231,6 @@ If you find yourself unable to pay, one strategy is to pay as much as you can, e
           "content_type": "text",
           "title": "Federal loans past due but not in default",
           "payload": "<POSTBACK_PAYLOAD>",
-          "image_url": "https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/black/png/256/check.png"
         },
         {
           "content_type": "text",
