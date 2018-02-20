@@ -154,6 +154,7 @@ If you find yourself unable to pay, one strategy is to pay as much as you can, e
 
    'disability' : "Total and Permanent Disability Discharge (TPD) can be difficult to obtain so it’s very important to follow all instructions and respond to all requests in a timely way. This is due to significant fraud found in past audits of the program. Only the actual borrower of the loans disability status can be submitted for discharge review. All borrowers applying for this discharge must do so at http://www.disabilitydischarge.com. There's more information available here: http://freestudentloanadvice.org/loan-forgiveness/total-and-permanent-disability-discharge/",
 
+
    'unpaid': "If you withdrew from school before completing 60% of the academic year or loan period, the school may have been required to return all or a portion of your loan to the loan holder. There's more information here: http://freestudentloanadvice.org/loan-forgiveness/unpaid-refund-discharge/",
 
    'thank_you': "Thank you! Please feel free to reach out to us anytime either through messenger or on the web.",
