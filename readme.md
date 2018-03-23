@@ -1,5 +1,12 @@
 # TISLA-FAQ
 
+[![Build Status](https://travis-ci.org/DavidAwad/TISLA_FAQ.svg?branch=master)](https://travis-ci.org/DavidAwad/TISLA_FAQ) 
+
+[![Coverage Status](https://coveralls.io/repos/DavidAwad/TISLA_FAQ/badge.svg?branch=master&service=github)](https://coveralls.io/github/DavidAwad/TISLA_FAQ?branch=master) 
+
+[![Code Climate](https://codeclimate.com/github/DavidAwad/TISLA_FAQ/badges/gpa.svg)](https://codeclimate.com/github/DavidAwad/TISLA_FAQ)
+
+
 This bot was built to handle FAQ's for TISLA (The Institute for Student Loan Advice).
 
 TISLA is a 501(c)(3) nonprofit that aims to educate the public about how to deal with student loans and manage your debt. [You can find out more about them here](https://freestudentloanadvice.org)
