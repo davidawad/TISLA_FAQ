@@ -4,7 +4,7 @@
 
 [![Coverage Status](https://coveralls.io/repos/DavidAwad/TISLA_FAQ/badge.svg?branch=master&service=github)](https://coveralls.io/github/DavidAwad/TISLA_FAQ?branch=master) 
 
-[![Code Climate](https://codeclimate.com/github/DavidAwad/TISLA_FAQ/badges/gpa.svg)](https://codeclimate.com/github/DavidAwad/TISLA_FAQ)
+[![Maintainability](https://api.codeclimate.com/v1/badges/74a0339033d7f15a68e7/maintainability)](https://codeclimate.com/github/davidawad/TISLA_FAQ/maintainability)
 
 
 This bot was built to handle FAQ's for TISLA (The Institute for Student Loan Advice).
