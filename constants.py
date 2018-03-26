@@ -73,7 +73,7 @@ raw_response_data = {
 
   'responses' : {
 
-      'intro' : "Hello!  I’m Sloan, your automated guide for advice on your student loans brought to you by TISLA.  This is not legal advice but simple guidance to help you manage your student loan debt.  Send 'restart' at any time to restart.  Ready?  Simply type your question and I’ll try and guide you to the best way to manage your student debt!",
+      'intro' : "Hello! I’m Sloan, your automated guide for advice on your student loans brought to you by TISLA. This is not legal advice but simple guidance to help you manage your student loan debt. Send 'restart' at any time to restart. Ready? Simply type your question and I’ll try and guide you to the best way to manage your student debt!",
 
 
     'loan_forgiveness' : "First the bad news, most borrowers should expect to repay their student loans as agreed. With that said, there are many student loan repayment, discharge and forgiveness programs out there. Over time, we plan on having a comprehensive list, but for now, we'll just talk about the most common programs.",
