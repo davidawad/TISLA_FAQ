@@ -1,12 +1,6 @@
 # TISLA-FAQ
 
-[![Build Status](https://travis-ci.org/davidawad/TISLA_FAQ.svg?branch=master)](https://travis-ci.org/davidawad/TISLA_FAQ)
-
-
-[![Coverage Status](https://coveralls.io/repos/github/davidawad/TISLA_FAQ/badge.svg?branch=master)](https://coveralls.io/github/davidawad/TISLA_FAQ?branch=master)
-
-
-[![Maintainability](https://api.codeclimate.com/v1/badges/74a0339033d7f15a68e7/maintainability)](https://codeclimate.com/github/davidawad/TISLA_FAQ/maintainability)
+[![Build Status](https://travis-ci.org/davidawad/TISLA_FAQ.svg?branch=master)](https://travis-ci.org/davidawad/TISLA_FAQ) [![Coverage Status](https://coveralls.io/repos/github/davidawad/TISLA_FAQ/badge.svg?branch=master)](https://coveralls.io/github/davidawad/TISLA_FAQ?branch=master)  [![Maintainability](https://api.codeclimate.com/v1/badges/74a0339033d7f15a68e7/maintainability)](https://codeclimate.com/github/davidawad/TISLA_FAQ/maintainability)
 
 
 This bot was built to handle FAQ's for TISLA (The Institute for Student Loan Advice).
