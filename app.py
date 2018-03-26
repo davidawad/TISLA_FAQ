@@ -24,6 +24,7 @@ def find_response(key):
 
 def bot_response(message):
     # determine the response and properly format it
+    # TODO should be separated
 
     ret_obj = {}
     ret_text = 'DEFAULT MESSAGE'

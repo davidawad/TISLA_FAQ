@@ -1,8 +1,9 @@
 # TISLA-FAQ
 
-[![Build Status](https://travis-ci.org/DavidAwad/TISLA_FAQ.svg?branch=master)](https://travis-ci.org/DavidAwad/TISLA_FAQ) 
+[![Build Status](https://travis-ci.org/davidawad/TISLA_FAQ.svg?branch=master)](https://travis-ci.org/davidawad/TISLA_FAQ)
 
-[![Coverage Status](https://coveralls.io/repos/DavidAwad/TISLA_FAQ/badge.svg?branch=master&service=github)](https://coveralls.io/github/DavidAwad/TISLA_FAQ?branch=master) 
+
+[![Coverage Status](https://coveralls.io/repos/DavidAwad/TISLA_FAQ/badge.svg?branch=master&service=github)](https://coveralls.io/github/DavidAwad/TISLA_FAQ?branch=master)
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/74a0339033d7f15a68e7/maintainability)](https://codeclimate.com/github/davidawad/TISLA_FAQ/maintainability)
 
